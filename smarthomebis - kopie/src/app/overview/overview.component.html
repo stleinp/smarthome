@@ -1,0 +1,20 @@
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fas fa-bell"></i> Notifications
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-flush small">
+          <div *ngFor="let notificatie of zichtbaar">
+            <app-notification routerLink="/notification/{{notificatie.id}}" boodschap="{{notificatie.message}}" icoon="{{notificatie.icon}}"></app-notification>
+          </div>
+          <div>
+            <button id="btn" (click)="toonMeer()">Laad meer notificaties</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

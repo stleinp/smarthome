@@ -1,0 +1,20 @@
+<p>notification-detail works!</p>
+
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div *ngIf="notificatie!==undefined; else geenNotificatieGevonden">
+      <a class="list-group-item list-group-item-action">
+        <div class="media">
+          <p class="fas {{notificatie.icon}}"></p>
+          <p class="media-body">
+            {{notificatie.message}} (notificatie id is {{notificatie.id}})
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #geenNotificatieGevonden>
+  <div>Geen notification gevonden, helaas...</div>
+</ng-template>
